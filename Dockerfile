@@ -9,7 +9,8 @@ RUN apt update && \
     pip3 install --upgrade pip && \
     pip3 install poetry && \
     poetry config virtualenvs.create false && \
-    poetry install
+    poetry install \
+    poetry lock [--no-update]
 
 EXPOSE 8501
 
