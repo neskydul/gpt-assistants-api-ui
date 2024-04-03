@@ -9,9 +9,8 @@ RUN apt update && \
     pip3 install --upgrade pip && \
     pip3 install poetry && \
     poetry config virtualenvs.create false && \
-    poetry config solver.lazy-wheel false \
-    poetry lock --no-update \
     poetry install \
+    poetry update \
 
 EXPOSE 8501
 
