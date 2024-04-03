@@ -7,9 +7,10 @@ RUN apt update && \
     apt -y upgrade && \
     apt install -y ffmpeg && \
     pip3 install --upgrade pip && \
-    poetry lock --no-update \
     pip3 install poetry && \
     poetry config virtualenvs.create false && \
+    poetry config solver.lazy-wheel false \
+    poetry lock --no-update \
     poetry install \
 
 EXPOSE 8501
