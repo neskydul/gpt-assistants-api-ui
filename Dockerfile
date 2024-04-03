@@ -8,6 +8,7 @@ RUN apt update && \
     apt install -y ffmpeg && \
     pip3 install --upgrade pip && \
     pip3 install poetry && \
+    poetry lock [--no-update] \
     poetry config virtualenvs.create false && \
     poetry install \
     poetry lock [--no-update]
